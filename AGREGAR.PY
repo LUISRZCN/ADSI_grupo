@@ -22,3 +22,19 @@ def agregar(ruta:int, datos:dict):
       break
   archivoExcel.save(ruta)
   return
+
+
+
+
+  elif accion==3:
+    datosActualizados={'titulo':'','descripcion':'','estado':'','fecha inicio':'','fecha finalizacion':''}
+    print('** Crear nueva Tarea **\n')
+    print('** Titulo **\n')
+    datosActualizados['titulo']=input('Indique el titulo de la tarea: ')
+    print('\n** descripcion **')
+    datosActualizados['descripcion']=input('Ingrese la descripcion de la tarea: ')
+    print()
+    datosActualizados['estado']='En espera'
+    now = datetime.now()
+    datosActualizados['fecha inicio']=str(now.day) +'/' + str(now.month)+'/'+str(now.year)
+    agregar(rut,datosActualizados)
