@@ -1,7 +1,7 @@
 from datetime import datetime
 from openpyxl import load_workbook
 
-rut=r'E:\grupo\productos.xlsx'
+rut=r'E:\Git_Hub\Base_CRUD.xlsx'
 
 def leer(ruta:str, extraer:str):
   archivoExcel=load_workbook(ruta)
@@ -133,19 +133,19 @@ while True:
     print('Indique la tarea que desea consultar:\nTodas las tareas: 1\nEn espera: 2\nEN ejecucion: 3\nPor aprobar: 4\nFinalizada: 5')
     opcConsulta=input('Escriba la tarea que desee consultar: ')
     if opcConsulta=='1':
-      print('\n\n** Consultando todas las tareas **')
+      print('\n\n** Consultado todas las tareas **')
       leer(rut,'todo')
     elif opcConsulta=='2':
-      print('\n\n** Consultando las tareas en espera **')
+      print('\n\n** Consultado todas las tareas **')
       leer(rut,'En espera')
     elif opcConsulta=='3':
-      print('\n\n** Consultando las tareas en ejecucion **')
+      print('\n\n** Consultado todas las tareas **')
       leer(rut,'En ejecucion')
     elif opcConsulta=='4':
-      print('\n\n** Consultando las tareas por aprobar **')
+      print('\n\n** Consultado todas las tareas **')
       leer(rut,'Por aprobar')
     elif opcConsulta=='5':
-      print('\n\n** Consultando todas las tareas finalizadas **')
+      print('\n\n** Consultado todas las tareas **')
       leer(rut,'Finalizada')
   elif accion==2:
     datosActualizados={'titulo':'','descripcion':'','estado':'','fecha inicio':'','fecha finalizacion':''}
@@ -187,4 +187,3 @@ while True:
     print('\n** Eliminar tarea **')
     iden=int(input('Indique el ID de la tarea que desea eliminar: '))
     borrar(rut,iden)
-Footer
